@@ -21,31 +21,57 @@
 
     </header>
 
+   
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery</title>
+        <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+        <!-- Javascript -->
+
+    </head>
+
+
     <div class="banner-frontpage-content" id="content">
         <div class="banner-frontpage-text">
-            <div class=>
-                <h1>Hvor vil du reise?</h1>
+            <h1>Hvor vil du reise?</h1>
+            <select>
+                <option>Fra </option>
+                <option>
+                    Kiel, Tyskland </option>
+                <option>Aarhus, Danmark </option>
+                <option> Helsinki, Finland</option>
+                <option>Stockholm, Sverige  </option>
+                <option>lnciedn </option>
+                <option>lnciedn </option>
 
+            </select>
+            <select>
+                <option>Til </option>
+                <option>Norge Oslo </option>
+                <option>Bergen </option>
+                <option>kri </option>
+                <option>lnciedn </option>
+                <option>lnciedn </option>
+                <option>lnciedn </option>
 
-                <a href="index.html">
-
-                    <img src="NewFolder/denmark.png" style="width:42px;height:42px;border:0">
-                </a>
-
-                <a href="index.html">
-
-                    <img src="resorse/norge.png">
-
-                    <img src="NewFolder/norge.png" style="width:42px;height:42px;border:0">
-                </a>
-
-
-
-                <a href="#" id="sweden" onclick="updateFunction()">
-
-                    <img src="NewFolder/sweden.png" style="width:42px;height:42px;border:0">
-                </a>
+            </select>
+            <div class="form-group ">
+                En vei <input type="radio" name="fav_language" value="HTML">
+                Tur retur <input type="radio" name="fav_language" value="CSS"><br>
             </div>
+
+
+
+            <!-- HTML -->
+            <p>Utreisedato: <input type="text" id="Utreise"></p>
+            <p>Hjemreisedato: <input type="text" id="Hjemreise"></p>
+
+            <a href="Bestiling.html" class="btn btn-primary">Bestill</a>
+
+
         </div>
 
         <div class="banner-frontpage-picture">
@@ -53,11 +79,20 @@
         </div>
     </div>
 
-
     <div class="container">
         <h3>Her er bestilingen:</h3>
-        <a href="lagre.html" class="btn btn-primary">Bestill ny bilett</a>
+        <a href="endre.html" class="btn btn-primary">Bestill ny bilett</a>
     </div>
+
+
+
+    <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
 
 
 </body>

@@ -8,6 +8,8 @@
     <script src="js/endre.js"></script>
 </head>
 <body>
+    
+    </
     <div class="container">
         <h1>Endre kunde</h1>
         <form class="form">
@@ -26,17 +28,52 @@
             </div>
             <div class="form-group">
                 <label>Postnr</label>
-                <input type="text" id="postnr" />
+                <input type="text" id="datepicker-14">
             </div>
             <div class="form-group">
                 <label>Poststed</label>
-                <input type="text" id="poststed" />
+                <input type="text" id="datepicker-13" />
             </div>
+
             <div class="form-group">
                 <input type="button" id="reg" value="Endre" class="btn btn-primary" onclick="endreKunde()" />
             </div>
-            <div id="feil" style="color: red"></div>
-        </form>
+            <div class="form-group ">
+                <input type="radio" name="fav_language" value="HTML"> En vei <br>
+                <input type="radio" name="fav_language" value="CSS">Tur retur <br>
+            </div>
+
+            <div>
+                <select>
+                    <option>Fra </option>
+                    <option> lnciedn</option>
+                    <option>lnciedn </option>
+                    <option>lnciedn </option>
+                    <option>lnciedn </option>
+                    <option>lnciedn </option>
+                    <option>lnciedn </option>
+
+                </select>
+                <select>
+                    <option>Til </option>
+                    <option>lnciedn </option>
+                    <option>lnciedn </option>
+                    <option>lnciedn </option>
+                    <option>lnciedn </option>
+                    <option>lnciedn </option>
+                    <option>lnciedn </option>
+
+                </select>
+
+            </div>
+            <div>
+                <button class="button" id="Ok"> Bestill</button>
+            </div>
+    </div>
+    <div id="feil" style="color: red"></div>
+    </form>
+    <div id="kundene"></div>
+
     </div>
 </body>
 </html>

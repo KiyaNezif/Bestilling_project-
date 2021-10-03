@@ -180,7 +180,7 @@ a {
     text-align: center;
 }
 
-
+/**/
 .banner-frontpage-picture {
     flex-grow: 1;
     flex-basis: 50%;
@@ -191,3 +191,82 @@ a {
         height: auto;
         min-width: 400px;
     }
+
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    opacity: 0.4;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"; /* first!*/
+    filter: alpha(opacity=40); /* second!*/
+    background-color: gray;
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.popUp label {
+    width: 4em;
+    float: left;
+    text-align: right;
+}
+
+margin-right: 0em;
+display: block;
+
+.form {
+    display: flex;
+    margin: 1000px;
+    padding: 1000px;
+    align-items: stretch;
+    justify-content: center;
+    padding-top: 59px;
+}

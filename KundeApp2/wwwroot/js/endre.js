@@ -12,7 +12,16 @@
         $("#poststed").val(kunde.poststed);
     }); 
 });
+$(function () {
+    $("#datepicker-13").datepicker();
+    $("#datepicker-13").datepicker();
+});
 
+
+$(function () {
+    $("#datepicker-14").datepicker();
+    $("#datepicker-14").datepicker();
+});
 function endreKunde() {
     const kunde = {
         id: $("#id").val(), // må ha med denne som ikke har blitt endret for å vite hvilken kunde som skal endres

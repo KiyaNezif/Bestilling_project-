@@ -1,0 +1,55 @@
+﻿body {
+}
+
+
+.mytabs {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+    cursor: pointer;
+}
+
+    .mytabs input[type="radio"] {
+        display: none;
+    }
+
+    .mytabs label {
+        padding: 16px;
+        background: #069370;
+        cursor: pointer;
+        color: #000;
+        font-family: font-family: Optima, Garamond, Verdana, Helvetica, Arial sans-serif;
+        width: 20%;
+    }
+
+    .mytabs.tab :hover {
+        background-color: #000;
+    }
+
+    .mytabs .tab {
+        width: 100%;
+        padding: 20px;
+        background: #fff1c2;
+        cursor: pointer;
+        order: 5;
+        display: none;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        overflow: hidden;
+    }
+
+        .mytabs .tab h2 {
+            font-size: 1em;
+        }
+
+    .mytabs input[type='radio']:checked + label + .tab {
+        display: block;
+        cursor: pointer;
+    }
+
+    .mytabs input[type="radio"]:checked + label {
+        background: #fff1c2;
+        weight: 80%;
+    }

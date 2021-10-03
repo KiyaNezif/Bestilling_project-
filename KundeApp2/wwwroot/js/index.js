@@ -2,7 +2,16 @@
     hentAlleKunder();
 });
 
+$(function () {
+    $("#Utreise").datepicker();
+    $("#Utreise").datepicker();
+});
 
+
+$(function () {
+    $("#Hjemreise").datepicker();
+    $("#Hjemreise").datepicker();
+});
 
 
 function hentAlleKunder() {
@@ -42,4 +51,28 @@ function slettKunde(id) {
         }
 
     });
+}
+
+$('#btnShowNew').click(function () {
+    var str = [];
+    $.each($('#place li.' + settings.selectingSeatCss + ' a'), function (index, value) {
+        str.push($(this).attr('title'));
+    });
+    if (str.length > 0) {
+        $('#<%=txtAmount.ClientID %>').val(str.length * chargePerSeat);
+        $('#<%=txtSeatNo.ClientID %>').val(str.join(','));
+        ShowPopup();
+    }
+    else {
+        alert('Select atleast one seat');
+    }
+})
+
+function ShowPopup() {
+    $('#mask').show();
+    $('#<%=PanelPop.ClientID %>').show();
+}
+function HidePopup() {
+    $('#mask').hide();
+    $('#<%=PanelPop.ClientID %>').hide();
 }
