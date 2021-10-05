@@ -12,7 +12,10 @@ namespace KundeApp2.Model
         public string Telefonnr { get; set; }
 
         public string Epost { get; set; }
-
+        public string fra { get; set; }
+        public string til { get; set; }
+        public string vei { get; set; }
+        
         public string Utreise { get; set; }
         public string Hjemreise { get; set; }
 

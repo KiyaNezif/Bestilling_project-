@@ -21,8 +21,7 @@ namespace KundeApp2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<KundeContext>(options =>
-                            options.UseSqlite("Data Source=Kunde.db"));
+            services.AddDbContext<KundeContext>(options =>options.UseSqlite("Data Source=Kunde.db"));
             services.AddScoped<IKundeRepository, KundeRepository>();
         }
     

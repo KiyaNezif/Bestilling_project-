@@ -12,9 +12,15 @@ namespace KundeApp2.Model
         public string Fornavn { get; set; }
         public string Etternavn { get; set; }
         public string Adresse { get; set; }
-        virtual public Poststeder Poststed { get; set; }
+        public virtual Poststeder Poststed { get; set; }
         public string Hjemreise { get; internal set; }
         public string Utreise { get; internal set; }
+        public string Telefonnr { get; set; }
+
+        public string Epost { get; set; }
+        public string fra { get; set; }
+        public string til { get; set; }
+        public string vei { get; set; }
     }
     
     public class Poststeder
@@ -25,7 +31,7 @@ namespace KundeApp2.Model
         public String Poststed { get; set; }
 
         // denne listen ikke nødvendig med mindre man skal finne kundene på et gitt postnr (altså gå inn via Poststeder-collection)
-        virtual public List<Kunder> Kunder { get; set; }  
+        public virtual List<Kunder> Kunder { get; set; }  
     }
 
     public class KundeContext : DbContext

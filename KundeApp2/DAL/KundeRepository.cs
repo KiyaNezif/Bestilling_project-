@@ -20,12 +20,16 @@ namespace KundeApp2.DAL
         {
             try
             {
-                var nyKundeRad = new Kunder();
-                nyKundeRad.Fornavn = innKunde.Fornavn;
-                nyKundeRad.Etternavn = innKunde.Etternavn;
-                nyKundeRad.Adresse = innKunde.Adresse;
-                nyKundeRad.Hjemreise = innKunde.Hjemreise;
-                nyKundeRad.Utreise = innKunde.Utreise;
+                var nyKundeRad = new Kunder
+                {
+                    Fornavn = innKunde.Fornavn,
+                    Etternavn = innKunde.Etternavn,
+                    Adresse = innKunde.Adresse,
+                    Hjemreise = innKunde.Hjemreise,
+                    Utreise = innKunde.Utreise,
+                    fra = innKunde.fra,
+                    vei = innKunde.vei
+                };
 
                 var sjekkPostnr = await _db.Poststeder.FindAsync(innKunde.Postnr);
                 if (sjekkPostnr == null)
@@ -63,8 +67,13 @@ namespace KundeApp2.DAL
                     Adresse = k.Adresse,
                     Postnr = k.Poststed.Postnr,
                     Poststed = k.Poststed.Poststed,
-                    Hjemreise = k.Hjemreise.Hjemreise,
-                    Utreise = k.Utreise.Utreise
+                    Hjemreise = k.Hjemreise,
+                    Utreise = k.Utreise,
+                    fra = k.fra,
+                    til = k.til,
+                    vei = k.vei,
+                    Epost = k.Epost,
+                    Telefonnr = k.Telefonnr
 
                 }).ToListAsync();
                 return alleKunder;
@@ -92,21 +101,30 @@ namespace KundeApp2.DAL
 
         public async Task<Kunde> HentEn(int id)
         {
-            Kunder enKunde = await _db.Kunder.FindAsync(id);
+            var k = await _db.Kunder.FindAsync(id);
+            if (k == null) return null;
             var hentetKunde = new Kunde()
             {
-                Id = enKunde.Id,
-                Fornavn = enKunde.Fornavn,
-                Etternavn = enKunde.Etternavn,
-                Adresse = enKunde.Adresse,
-                Postnr = enKunde.Poststed.Postnr,
-                Poststed = enKunde.Poststed.Poststed,
-                Hjemreise=enKunde.Hjemreise,
-                Utreise= enKunde.Utreise
+                Id = k.Id,
+                Fornavn = k.Fornavn,
+                Etternavn = k.Etternavn,
+                Adresse = k.Adresse,
+                Postnr = k.Poststed.Postnr,
+                Poststed = k.Poststed.Poststed,
+                Hjemreise = k.Hjemreise,
+                Utreise = k.Utreise,
+                fra = k.fra,
+                til = k.til,
+                vei = k.vei,
+                Epost = k.Epost,
+                Telefonnr = k.Telefonnr
             };
             return hentetKunde;
         }
 
-       
+        public Task<bool> Endre(Kunde endreKunde)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
