@@ -63,8 +63,8 @@ namespace KundeApp2.DAL
                     Adresse = k.Adresse,
                     Postnr = k.Poststed.Postnr,
                     Poststed = k.Poststed.Poststed,
-                    Hjemreise = k.Hjemreise,
-                    Utreise = k.Utreise
+                    Hjemreise = k.Hjemreise.Hjemreise,
+                    Utreise = k.Utreise.Utreise
 
                 }).ToListAsync();
                 return alleKunder;
@@ -107,9 +107,6 @@ namespace KundeApp2.DAL
             return hentetKunde;
         }
 
-        public Task<bool> Endre(Kunde endreKunde)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
