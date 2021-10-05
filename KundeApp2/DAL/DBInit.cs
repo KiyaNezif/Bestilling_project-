@@ -16,8 +16,8 @@ namespace KundeApp2.Model
                 var context = serviceScope.ServiceProvider.GetService<KundeContext>();
 
                 // må slette og opprette databasen hver gang når den skalinitieres (seed`es)
-                context.Database.EnsureDeleted();
-                context.Database.EnsureCreated();
+               context.Database.EnsureDeleted();
+               context.Database.EnsureCreated();
 
                 var poststed1 = new Poststeder {Postnr = "0270", Poststed = "Oslo"};
                 var poststed2 = new Poststeder {Postnr = "1370", Poststed = "Asker"};

@@ -7,10 +7,17 @@ namespace KundeApp2.Model
         public string Fornavn { get; set; }
         public string Etternavn { get; set; }
         public string Adresse { get; set; }
-
         public string Postnr { get; set; }
-
         public string Poststed { get; set; }
+        public string Telefonnr { get; set; }
+
+        public string Epost { get; set; }
+
+        public string Utreise { get; set; }
+        public string Hjemreise { get; set; }
+
+    
+
        
      }
 }

@@ -13,6 +13,8 @@ namespace KundeApp2.Model
         public string Etternavn { get; set; }
         public string Adresse { get; set; }
         virtual public Poststeder Poststed { get; set; }
+        public string Hjemreise { get; internal set; }
+        public string Utreise { get; internal set; }
     }
     
     public class Poststeder

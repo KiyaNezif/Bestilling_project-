@@ -24,6 +24,8 @@ namespace KundeApp2.DAL
                 nyKundeRad.Fornavn = innKunde.Fornavn;
                 nyKundeRad.Etternavn = innKunde.Etternavn;
                 nyKundeRad.Adresse = innKunde.Adresse;
+                nyKundeRad.Hjemreise = innKunde.Hjemreise;
+                nyKundeRad.Utreise = innKunde.Utreise;
 
                 var sjekkPostnr = await _db.Poststeder.FindAsync(innKunde.Postnr);
                 if (sjekkPostnr == null)
@@ -32,6 +34,7 @@ namespace KundeApp2.DAL
                     poststedsRad.Postnr = innKunde.Postnr;
                     poststedsRad.Poststed = innKunde.Poststed;
                     nyKundeRad.Poststed = poststedsRad;
+
                 }
                 else
                 {
@@ -59,7 +62,10 @@ namespace KundeApp2.DAL
                     Etternavn = k.Etternavn,
                     Adresse = k.Adresse,
                     Postnr = k.Poststed.Postnr,
-                    Poststed = k.Poststed.Poststed
+                    Poststed = k.Poststed.Poststed,
+                    Hjemreise = k.Hjemreise.Hjemreise,
+                    Utreise = k.Utreise.Utreise
+
                 }).ToListAsync();
                 return alleKunder;
             }
@@ -94,41 +100,13 @@ namespace KundeApp2.DAL
                 Etternavn = enKunde.Etternavn,
                 Adresse = enKunde.Adresse,
                 Postnr = enKunde.Poststed.Postnr,
-                Poststed = enKunde.Poststed.Poststed
+                Poststed = enKunde.Poststed.Poststed,
+                Hjemreise=enKunde.Hjemreise,
+                Utreise= enKunde.Utreise
             };
             return hentetKunde;
         }
 
-        public async Task<bool> Endre(Kunde endreKunde)
-        {
-            try
-            {
-                var endreObjekt = await _db.Kunder.FindAsync(endreKunde.Id);
-                if (endreObjekt.Poststed.Postnr != endreKunde.Postnr)
-                {
-                    var sjekkPostnr = _db.Poststeder.Find(endreKunde.Postnr);
-                    if (sjekkPostnr == null)
-                    {
-                        var poststedsRad = new Poststeder();
-                        poststedsRad.Postnr = endreKunde.Postnr;
-                        poststedsRad.Poststed = endreKunde.Poststed;
-                        endreObjekt.Poststed = poststedsRad;
-                    }
-                    else
-                    {
-                        endreObjekt.Poststed.Postnr = endreKunde.Postnr;
-                    }
-                }
-                endreObjekt.Fornavn = endreKunde.Fornavn;
-                endreObjekt.Etternavn = endreKunde.Etternavn;
-                endreObjekt.Adresse = endreKunde.Adresse;
-                await _db.SaveChangesAsync();
-            }
-            catch
-            {
-                return false;
-            }
-            return true;
-        }
+       
     }
 }
