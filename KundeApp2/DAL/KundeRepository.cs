@@ -28,7 +28,10 @@ namespace KundeApp2.DAL
                     Hjemreise = innKunde.Hjemreise,
                     Utreise = innKunde.Utreise,
                     fra = innKunde.fra,
-                    vei = innKunde.vei
+                    til=innKunde.til,
+                    vei = innKunde.vei,
+                    Telefonnr = innKunde.Telefonnr,
+                    Epost=innKunde.Epost
                 };
 
                 var sjekkPostnr = await _db.Poststeder.FindAsync(innKunde.Postnr);

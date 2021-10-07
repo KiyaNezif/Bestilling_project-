@@ -23,23 +23,28 @@ function hentAlleKunder() {
 function formaterKunder(kunder) {
     let ut = "<table class='table table-striped'>" +
         "<tr>" +
-        "<th>Fornavn</th><th>Etternavn</th><th>Adresse</th><th>Postnr</th><th>Poststed</th><th></th><th></th>" +
+        "<th>Fra</th><th>Til</th><th>vei</th><th>Utreisedato</th><th>Hjemreisedato</th><th>Fornavn</th><th>Etternavn</th><th>Adresse</th><th>Postnr</th><th>Poststed</th><th>Postnr</th><th>Telefonnr</th><th></th>" +
         "</tr>";
     for (let kunde of kunder) {
-        ut += "<tr>" + 
+        ut += "<tr>" +
+            "<td>" + kunde.fra + "</td>" +
+            "<td>" + kunde.til + "</td>" +
+            "<td>" + kunde.vei + "</td>" +
+            "<td>" + kunde.utreise + "</td>" +
+            "<td>" + kunde.hjemreise + "</td>" +
+            "<td>" + kunde.poststed + "</td>" +
             "<td>" + kunde.fornavn + "</td>" +
             "<td>" + kunde.etternavn + "</td>" +
             "<td>" + kunde.adresse + "</td>" +
             "<td>" + kunde.postnr + "</td>" +
             "<td>" + kunde.poststed + "</td>" +
-            "<td> <a class='btn btn-primary' href='endre.html?id="+kunde.id+"'>Endre</a></td>"+
-            "<td> <button class='btn btn-danger' onclick='slettKunde("+kunde.id+")'>Slett</button></td>"+
+            "<td>" + kunde.telefonnr + "</td>" +
             "</tr>";
     }
     ut += "</table>";
     $("#kundene").html(ut);
 }
-
+   
 function slettKunde(id) {
     const url = "Kunde/Slett?id="+id;
     $.get(url, function (OK) {
