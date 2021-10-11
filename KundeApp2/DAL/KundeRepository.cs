@@ -4,16 +4,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using KundeApp2.Model;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace KundeApp2.DAL
 {
     public class KundeRepository : IKundeRepository
     {
-        private readonly KundeContext _db;
+        private  KundeContext _db;
+        private  ILogger<KundeRepository> _log;
 
-        public KundeRepository(KundeContext db)
+        public KundeRepository(KundeContext db, ILogger<KundeRepository> log)
         {
             _db = db;
+            _log = log;
         }
 
         public async Task<bool> Lagre(Kunde innKunde)
@@ -51,8 +54,9 @@ namespace KundeApp2.DAL
                 await _db.SaveChangesAsync();
                 return true;
             }
-            catch
+            catch(Exception e)
             {
+                _log.LogInformation(e.Message);
                 return false;
             }
         }
@@ -81,13 +85,14 @@ namespace KundeApp2.DAL
                 }).ToListAsync();
                 return alleKunder;
             }
-            catch
+            catch (Exception e)
             {
+                _log.LogInformation(e.Message);
                 return null;
             }
         }
 
-        public async Task<bool> Slett(int id)
+      /*  public async Task<bool> Slett(int id)
         {
             try
             {
@@ -100,7 +105,14 @@ namespace KundeApp2.DAL
             {
                 return false;
             }
-        }
+        }*/
+
+       /* public async Task<bool> slettAlle(int id)
+        {
+            foreach (var entity in dbContext.MyEntities)
+                dbContext.MyEntities.Remove(entity);
+            dbContext.SaveChanges();
+        }*/
 
         public async Task<Kunde> HentEn(int id)
         {
@@ -126,6 +138,11 @@ namespace KundeApp2.DAL
         }
 
         public Task<bool> Endre(Kunde endreKunde)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> Slett(int id)
         {
             throw new NotImplementedException();
         }

@@ -13,7 +13,7 @@ namespace KundeApp2.Model
         {
             using (var serviceScope = app.ApplicationServices.CreateScope())
             {
-                var context = serviceScope.ServiceProvider.GetService<KundeContext>();
+               var context = serviceScope.ServiceProvider.GetService<KundeContext>();
 
                 // må slette og opprette databasen hver gang når den skalinitieres (seed`es)
               

@@ -23,7 +23,7 @@ function hentAlleKunder() {
 function formaterKunder(kunder) {
     let ut = "<table class='table table-striped'>" +
         "<tr>" +
-        "<th>Fra</th><th>Til</th><th>vei</th><th>Utreisedato</th><th>Hjemreisedato</th><th>Fornavn</th><th>Etternavn</th><th>Adresse</th><th>Postnr</th><th>Poststed</th><th>Postnr</th><th>Telefonnr</th><th></th>" +
+        "<th>Fra</th><th>Til</th><th>vei</th><th>Utreisedato</th><th>Hjemreisedato</th><th>Fornavn</th><th>Etternavn</th><th>Adresse</th><th>Postnr</th><th>Poststed</th><th>Postnr</th><th>Telefonnr</th><th>Poststed</th><th></th>" +
         "</tr>";
     for (let kunde of kunder) {
         ut += "<tr>" +
@@ -39,6 +39,8 @@ function formaterKunder(kunder) {
             "<td>" + kunde.postnr + "</td>" +
             "<td>" + kunde.poststed + "</td>" +
             "<td>" + kunde.telefonnr + "</td>" +
+            "<td>" + kunde.epost + "</td>" +
+
             "</tr>";
     }
     ut += "</table>";
@@ -72,12 +74,8 @@ $('#btnShowNew').click(function () {
         alert('Select atleast one seat');
     }
 })
-
-function ShowPopup() {
-    $('#mask').show();
-    $('#<%=PanelPop.ClientID %>').show();
-}
-function HidePopup() {
-    $('#mask').hide();
-    $('#<%=PanelPop.ClientID %>').hide();
+function slettAlt() {
+    $.get("/slettAlle", function () {
+        hentAlle();
+    });
 }

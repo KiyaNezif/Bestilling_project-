@@ -24,8 +24,10 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "applicationUrl": "http://localhost:5000"
-    },
-    "WSL": {
+    }
+  }
+}
+    /*"WSL": {
       "commandName": "WSL2",
       "launchBrowser": true,
       "launchUrl": "http://localhost:5000/index.html",
@@ -35,5 +37,4 @@
       },
       "distributionName": ""
     }
-  }
-}
+  }}*/

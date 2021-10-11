@@ -29,10 +29,10 @@ namespace KundeApp2.Controllers
             return await _db.HentAlle();
         }
 
-        public async Task<bool> Slett(int id)
-        {
-            return await _db.Slett(id);
-        }
+       // public async Task<bool> Slett(int id)
+        //{
+         //   return await _db.Slett(id);
+       // }
 
         public async Task<Kunde> HentEn(int id)
         {

@@ -9,6 +9,7 @@
         vei: $("#vei").val(),
         Utreise: $("#Utreise").val(),
         Hjemreise: $("#Hjemreise").val(),
+        Epost:$("#epost").val,
         Telefonnr: $("#Telefonnr").val(),
         poststed: $("#poststed").val()
     }

@@ -28,9 +28,10 @@ namespace KundeApp2.Model
         [Key]
         [System.ComponentModel.DataAnnotations.Schema.DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string Postnr { get; set; }
-        public String Poststed { get; set; }
+        public string Poststed { get; set; }
 
         // denne listen ikke nødvendig med mindre man skal finne kundene på et gitt postnr (altså gå inn via Poststeder-collection)
+        
         public virtual List<Kunder> Kunder { get; set; }  
     }
 
@@ -47,6 +48,7 @@ namespace KundeApp2.Model
 
         public DbSet<Kunder> Kunder { get; set; }
         public DbSet<Poststeder> Poststeder { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

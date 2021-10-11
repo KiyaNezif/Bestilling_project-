@@ -1,135 +1,168 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<!doctype html>
+<html lang="en">
 <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link href="js/index.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/2.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/bestiling.js"></script>
+    <script src="js/Validering.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/lagre.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <title>Bestille billett</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
 </head>
+
 <body>
-    <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Kunderegister</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/2.3.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="js/bestiling.js"></script>
-        <script src="js/validate.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-        <link href="js/StyleSheet.css" rel="stylesheet" />
-        <script src="js/index.js"></script>
-        <link href="js/StyleSheet.css" rel="stylesheet" />
-        <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-    </head>
 
     <header class="header">
         <input class="menu-btn" type="checkbox" id="menu-btn" name="menu-btn" />
         <label class="menu-icon" for="menu-btn"><span class="nav-icon">──</span></label>
         <ul class="menu">
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="challenge.html">About </a></li>
-            <li><a href="in.html">Solution</a></li>
+            <li><a class="active" href="index.html">Forside</a></li>
+            <li><a href="about.html">Om oss </a></li>
+
         </ul>
 
-    </header><br/>
+    </header><br />
 
-             <body>
 
-                 <div class="container" style="padding-top: 100px; padding-left: 100px;">
-                     
-                     <h1>Bestill</h1>
-                     <div class="form">
-                         <select name="fra" id="fra">
-                             <option>Fra </option>
-                             <option>Kiel,Tyskland</option>
-                             <option>Aarhus, Danmark </option>
-                             <option> Helsinki, Finland</option>
-                             <option>Stockholm, Sverige  </option>
-                             <option>lnciedn </option>
-                             <option>lnciedn </option>
+    <div class="banner-frontpage-content">
+        <div class="banner-frontpage-text">
+            <div class="banner-frontpage-content-center" id="content">
+                <div class="col-md-8">
+                    <div class="banner-frontpage-text">
+                        <form class="form">
+                            <div class="form-heading">
+                                <h1 color="white">Billett bestilling</h1>
+                                <p>Fyll inn informasjon</p>
+                            </div>
+                            <br />
+                            <label for="fra">Fra</label><br />
+                            <select id="fra" name="fra">
+                                <option></option>
+                                <option value="tyskland">Kiel, Tyskland</option>
+                                <option value="england">London, England </option>
+                                <option value="spania">Barcelona, Spania</option>
+                                <option value="italia">Roma, Italia  </option>
+                            </select><br />
 
-                         </select>
-                         <select name="til" id="til">
-                             <option>Til </option>
-                             <option>Norge Oslo </option>
-                             <option>Bergen </option>
-                             <option>kri </option>
-                             <option>lnciedn </option>
-                             <option>lnciedn </option>
-                             <option>lnciedn </option>
+                            <label for="til">Til:</label><br />
+                            <select id="til" name="til">
+                                <option></option>
+                                <option value="mexico">Mexico city, Mexico </option>
+                                <option value="japan">Tokyo,Japan </option>
+                                <option value="usa">Hawaii,USA </option>
+                                <option value="australia">Sydney, Australia </option>
 
-                         </select>
-                     </div></br>
-                             <div class="box">
-                                 <select name="vei" id="vei">
-                                     <option>En vei / Tur retur</option>
-                                     <option>En vei </option>
-                                     <option>Tur retur</option>
-                                 </select>
-                             </div>
-                                 <!-- <div class="form-group " id="vei">
-                 En vei <input type="radio" name="vei" value="envei">
-                 Tur retur <input type="radio" name="vei" value="turretur"><br />
-             </div> -->
+                            </select><br />
 
-                     
-                                 <div class="form-group">
-                                     <label for="Utreise" class="form">Utreisedato:</label>
-                                     <div class="input">
-                                         <input type="text" id="Utreise" name="Utreise">
-                                         </div>
-                                     <label for="Hjemreise" class="form">Hjemreisedato:</label>
-                                     <div class="input">
-                                         <input type="text" id="Hjemreise" name="Hjemreise"></p>
-                                     </div>
+                            <label for="vei">Reisetype:</label><br />  <!--Endre id=vei tilreisetype?-->
+                            <select name="vei" id="vei">
+                                <option placeholder=" reise vei"></option>
+                                <option>En vei </option>
+                                <option>Tur retur</option>
 
-                                     <input type="hidden" id="id" />
-                                     <div class="form-group">
-                                         <label>Fornavn</label>
-                                         <input type="text" id="fornavn" onchange="validerFornavn(this.value)" />
-                                         <span id="feilFornavn" style="color: red"></span>
-                                     </div>
-                                     <div class="form-group">
-                                         <label>Etternavn</label>
-                                         <input type="text" id="etternavn" onchange="validerEtternavn(this.value)" />
-                                         <span id="feilEtternavn" style="color: red"></span>
-                                     </div>
-                                     <div class="form-group">
-                                         <label>Adresse</label>
-                                         <input type="text" id="adresse" onchange="validerAdresse(this.value)" />
-                                         <span id="feilAdresse" style="color: red"></span>
-                                     </div>
-                                     <div class="form-group">
-                                         <label>Postnr</label>
-                                         <input type="text" id="postnr" onchange="validerPostnr(this.value)" />
-                                         <span id="feilPostnr" style="color: red"></span>
-                                     </div>
-                                     <div class="form-group">
-                                         <label>Poststed</label>
-                                         <input type="text" id="poststed" onchange="validerPoststed(this.value)" />
-                                         <span id="feilPoststed" style="color: red"></span>
-                                     </div>
-                                     <div class="form-group">
-                                         <label>Telefonnr</label>
-                                         <input type="text" id="Telefonnr" name="Telefonnr" onchange="validerTelefonnr(this.value)" />
-                                         <span id="" style="color: red"></span>
-                                     </div>
-                                     <div class="form-group">
-                                         <input type="button" id="reg" value="Bestill" class="btn btn-primary" onclick="lagreBestiling()" />
-                                     </div>
-                                     <div id="feil" style="color: red"></div>
-                             </div>
-                         </div>
-                 </div>
+                            </select>
+                            <br />
 
-                         <div class="container">
-                             <div class="panel-heading">
-                                 <h3>Kviteringen:</h3>
-                             </div>
-                             <div id="kundene"></div>
+                            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-                         </div>
+                            <label for="fornavn"> Utreisedato:</label>
+                            <input placeholder="Utreise" type="text" id="Utreise" name="Utreise">
+                            <span id="feilUtreise" style="color: red"></span>
+
+
+                            <label for="Hjemreise" class="form">Hjemreisedato:</label>
+                            <input type="text" id="Hjemreise" placeholder="Hjemmereise" name="Hjemreise">
+                            <span id="feilHjemereise" style="color: red"></span>
+
+
+                            <label for="fornavn">First Name:</label>
+                            <input type="text" id="fornavn" class="form-control" placeholder="fornavn" onchange="validerFornavn(this.value)" />
+                            <span id="feilFornavn" style="color: red"></span>
+
+                            <label for="etternavn"> Etternavn:</label>
+                            <input type="text" id="etternavn" placeholder="etternavn" onchange="validerEtternavn(this.value)" />
+                            <span id="feilEtternavn" style="color: red"></span>
+
+                            <label for="adresse">Adresse:</label>
+                            <input type="text" id="adresse" placeholder="Adresse" onchange="validerAdresse(this.value)" />
+                            <span id="feilAdresse" style="color: red"></span>
+
+                            <label for="postnr">Postnr:</label>
+                            <input type="text" id="postnr" placeholder="postnr" onchange="validerPostnr(this.value)" />
+                            <span id="feilPostnr" style="color: red"></span>
+
+
+                            <label for="poststed">Poststed</label>
+                            <input type="text" id="poststed" placeholder="poststed" onchange="validerPoststed(this.value)" />
+                            <span id="feilPoststed" style="color: red"></span>
+
+
+                            <label for="epost">Epost:</label>
+                            <input type="text" id="epost" name="Epost" placeholder="E-post" onchange="validerEpost(this.value)" />
+                            <span id="feilEpost" style="color: red"></span>
+
+                            <label for="fname">Telefonnr:</label>
+                            <input type="text" id="Telefonnr" name="Telefonnr" placeholder="telefonnr" onchange="validerTelefonnr(this.value)" />
+                            <span id="feilTelefonnr" style="color: red"></span>
+
+
+                            <div class="form-group">
+                                <input type="button" id="reg" value="Bestill" class="btn btn-primary" onclick="lagreBestiling()" />
+                            </div>
+                            <div id="feil" style="color: red"></div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="banner-frontpage-picture">
+            <img src="NewFolder/bått.jpg" />
+            <H2>
+                Hvorfor cruise?
+            </H2>
+            <p>
+                Enkel, praktisk måte å reise på. Som en ny cruiser kan bekvemmeligheten ikke toppes. Pakk ut en gang og opplev det beste i regionen du besøker på en cruise -ferie. Det er ingenting enklere enn å våkne om morgenen i verdens mest spennende og interessante byer.
+
+                Uslåelig verdi. Cruiseprisen inkluderer overnatting, bespisning, underholdning og en endeløs rekke aktiviteter. I tillegg trenger du ikke å betale for kostbare flybilletter, tog eller motorsykkel for å komme deg fra en by til en annen.
+            </p><br />
+            <p>
+                Varm, imøtekommende service. Du vil være hjemme uten omsorg i verden. Fra soloppgang til langt på natt, vi er der for å forutse alle dine behov. Og ved reisens slutt vil mannskapet vårt føle seg som familie.
+
+                Forfriskende sjøluft. Sjødager kan være så avslappende eller aktive som du ønsker. Det er ingenting som kan sammenlignes med å være ute på det åpne havet med varme havbris.
+            </p>
+        </div>
+
+    </div>
+    <div class="panel-heading">
+        <h3>Ordrebekreftelse:</h3>
+    </div>
+    <div id="kundene"></div>
+    </div>
 
 
 </body>
-    </html>
+</html>
